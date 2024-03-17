@@ -1,0 +1,3 @@
+// QString file_name =QFileDialog ::getSaveFileName(this,"open the file");
+    QFile file(file_path);
+//haidooooooooooooooooooooooood
