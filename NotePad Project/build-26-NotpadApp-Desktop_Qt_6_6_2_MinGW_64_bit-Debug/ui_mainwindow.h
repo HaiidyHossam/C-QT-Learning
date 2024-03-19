@@ -35,6 +35,11 @@ public:
     QAction *actionredo;
     QAction *actionundo;
     QAction *actionabout;
+    QAction *actionFont;
+    QAction *actioncolor;
+    QAction *actionback_ground_color;
+    QAction *actionbackground_color_text;
+    QAction *actionprint;
     QWidget *centralwidget;
     QVBoxLayout *verticalLayout;
     QTextEdit *textEdit;
@@ -48,7 +53,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(759, 617);
+        MainWindow->resize(503, 429);
         actionnew = new QAction(MainWindow);
         actionnew->setObjectName("actionnew");
         QIcon icon;
@@ -99,6 +104,16 @@ public:
         QIcon icon9;
         icon9.addFile(QString::fromUtf8(":/rec/img/about.jpg"), QSize(), QIcon::Normal, QIcon::Off);
         actionabout->setIcon(icon9);
+        actionFont = new QAction(MainWindow);
+        actionFont->setObjectName("actionFont");
+        actioncolor = new QAction(MainWindow);
+        actioncolor->setObjectName("actioncolor");
+        actionback_ground_color = new QAction(MainWindow);
+        actionback_ground_color->setObjectName("actionback_ground_color");
+        actionbackground_color_text = new QAction(MainWindow);
+        actionbackground_color_text->setObjectName("actionbackground_color_text");
+        actionprint = new QAction(MainWindow);
+        actionprint->setObjectName("actionprint");
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         verticalLayout = new QVBoxLayout(centralwidget);
@@ -111,7 +126,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 759, 26));
+        menubar->setGeometry(QRect(0, 0, 503, 26));
         menufile = new QMenu(menubar);
         menufile->setObjectName("menufile");
         menuedit = new QMenu(menubar);
@@ -133,12 +148,18 @@ public:
         menufile->addSeparator();
         menufile->addAction(actionsave);
         menufile->addAction(actionsave_as);
+        menufile->addAction(actionprint);
         menuedit->addAction(actioncut);
         menuedit->addAction(actioncopy);
         menuedit->addAction(actionpaste);
         menuedit->addSeparator();
         menuedit->addAction(actionredo);
         menuedit->addAction(actionundo);
+        menuedit->addSeparator();
+        menuedit->addAction(actionFont);
+        menuedit->addAction(actioncolor);
+        menuedit->addAction(actionback_ground_color);
+        menuedit->addAction(actionbackground_color_text);
         menuabout->addAction(actionabout);
 
         retranslateUi(MainWindow);
@@ -159,6 +180,11 @@ public:
         actionredo->setText(QCoreApplication::translate("MainWindow", "redo", nullptr));
         actionundo->setText(QCoreApplication::translate("MainWindow", "undo", nullptr));
         actionabout->setText(QCoreApplication::translate("MainWindow", "about", nullptr));
+        actionFont->setText(QCoreApplication::translate("MainWindow", "Font", nullptr));
+        actioncolor->setText(QCoreApplication::translate("MainWindow", "color", nullptr));
+        actionback_ground_color->setText(QCoreApplication::translate("MainWindow", "back ground color", nullptr));
+        actionbackground_color_text->setText(QCoreApplication::translate("MainWindow", "background color_text", nullptr));
+        actionprint->setText(QCoreApplication::translate("MainWindow", "print", nullptr));
         menufile->setTitle(QCoreApplication::translate("MainWindow", "file", nullptr));
         menuedit->setTitle(QCoreApplication::translate("MainWindow", "edit", nullptr));
         menuabout->setTitle(QCoreApplication::translate("MainWindow", "about", nullptr));

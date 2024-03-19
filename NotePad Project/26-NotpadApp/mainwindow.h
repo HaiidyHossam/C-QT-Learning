@@ -38,6 +38,16 @@ private slots:
 
     void on_actionabout_triggered();
 
+    void on_actionFont_triggered();
+
+    void on_actioncolor_triggered();
+
+    void on_actionback_ground_color_triggered();
+
+    void on_actionbackground_color_text_triggered();
+
+    void on_actionprint_triggered();
+
 private:
     Ui::MainWindow *ui;
     QString file_path;

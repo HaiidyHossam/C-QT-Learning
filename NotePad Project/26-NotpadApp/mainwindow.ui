@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>759</width>
-    <height>617</height>
+    <width>503</width>
+    <height>429</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -25,7 +25,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>759</width>
+     <width>503</width>
      <height>26</height>
     </rect>
    </property>
@@ -40,6 +40,7 @@
     <addaction name="separator"/>
     <addaction name="actionsave"/>
     <addaction name="actionsave_as"/>
+    <addaction name="actionprint"/>
    </widget>
    <widget class="QMenu" name="menuedit">
     <property name="title">
@@ -51,6 +52,11 @@
     <addaction name="separator"/>
     <addaction name="actionredo"/>
     <addaction name="actionundo"/>
+    <addaction name="separator"/>
+    <addaction name="actionFont"/>
+    <addaction name="actioncolor"/>
+    <addaction name="actionback_ground_color"/>
+    <addaction name="actionbackground_color_text"/>
    </widget>
    <widget class="QMenu" name="menuabout">
     <property name="title">
@@ -151,6 +157,31 @@
    </property>
    <property name="text">
     <string>about</string>
+   </property>
+  </action>
+  <action name="actionFont">
+   <property name="text">
+    <string>Font</string>
+   </property>
+  </action>
+  <action name="actioncolor">
+   <property name="text">
+    <string>color</string>
+   </property>
+  </action>
+  <action name="actionback_ground_color">
+   <property name="text">
+    <string>back ground color</string>
+   </property>
+  </action>
+  <action name="actionbackground_color_text">
+   <property name="text">
+    <string>background color_text</string>
+   </property>
+  </action>
+  <action name="actionprint">
+   <property name="text">
+    <string>print</string>
    </property>
   </action>
  </widget>
